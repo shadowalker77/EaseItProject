@@ -20,7 +20,9 @@ android {
         }
     }
 }
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1' //version required
+}
 dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
 }
