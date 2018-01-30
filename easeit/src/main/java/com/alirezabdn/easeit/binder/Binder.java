@@ -1,4 +1,4 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.binder;
 
 import android.content.Context;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.binder;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,8 +9,10 @@ import java.lang.annotation.Target;
  * Created by shadoWalker on 1/29/18.
  */
 
-@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface OnClickOf {
-    int value();
+public @interface BindStatus {
+    public enum Status {BIND, DO_NOT_BIND}
+
+    Status value() default Status.BIND;
 }

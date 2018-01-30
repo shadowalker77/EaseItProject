@@ -1,9 +1,11 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.binder;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.alirezabdn.easeit.ease.Ease;
 
 /**
  * Created by shadoWalker on 1/28/18.

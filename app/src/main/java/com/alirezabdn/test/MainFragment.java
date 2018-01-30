@@ -2,7 +2,7 @@ package com.alirezabdn.test;
 
 import android.widget.TextView;
 
-import com.alirezabdn.easeit.BinderFragment;
+import com.alirezabdn.easeit.binder.BinderFragment;
 
 /**
  * Created by shadoWalker on 1/29/18.

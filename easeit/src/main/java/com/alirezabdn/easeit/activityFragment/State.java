@@ -1,4 +1,6 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.activityFragment;
+
+import com.alirezabdn.easeit.binder.BinderFragment;
 
 /**
  * Created by Administrator on 10/16/2017.

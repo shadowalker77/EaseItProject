@@ -1,10 +1,12 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.binder;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.alirezabdn.easeit.ease.Ease;
 
 /**
  * Created by Administrator on 10/16/2017.

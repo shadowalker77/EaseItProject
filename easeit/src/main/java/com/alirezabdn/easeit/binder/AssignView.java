@@ -1,4 +1,4 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.binder;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

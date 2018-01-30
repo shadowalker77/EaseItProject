@@ -1,6 +1,9 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.activityFragment;
 
 import android.support.v4.app.FragmentManager;
+
+import com.alirezabdn.easeit.binder.BinderActivity;
+import com.alirezabdn.easeit.binder.BinderFragment;
 
 import java.util.ArrayList;
 import java.util.List;

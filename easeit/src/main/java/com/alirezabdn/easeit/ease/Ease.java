@@ -1,4 +1,4 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.ease;
 
 import android.view.View;
 

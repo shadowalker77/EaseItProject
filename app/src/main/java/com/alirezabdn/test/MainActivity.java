@@ -1,7 +1,7 @@
 package com.alirezabdn.test;
 
-import com.alirezabdn.easeit.State;
-import com.alirezabdn.easeit.StateMachineCore;
+import com.alirezabdn.easeit.activityFragment.State;
+import com.alirezabdn.easeit.activityFragment.StateMachineCore;
 
 public class MainActivity extends StateMachineCore {
 

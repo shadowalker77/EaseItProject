@@ -1,4 +1,4 @@
-package com.alirezabdn.easeit;
+package com.alirezabdn.easeit.activityFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
