@@ -23,7 +23,7 @@ public abstract class BinderFragment extends Fragment {
         if (rootView != null)
             return rootView;
         rootView = inflater.inflate(getLayoutId(), container, false);
-        Binder.bind(getActivity(), this, rootView);
+        Binder.bind(getActivity(), this, rootView, BinderFragment.class);
         Ease.easeIt(this, rootView);
         onCreate();
         return rootView;

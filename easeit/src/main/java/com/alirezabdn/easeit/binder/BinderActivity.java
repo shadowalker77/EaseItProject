@@ -21,7 +21,7 @@ public abstract class BinderActivity extends AppCompatActivity {
             startActivity(new Intent(this, this.getClass()));
         }
         setContentView(getLayoutId());
-        Binder.bind(this, this, getMainLayout());
+        Binder.bind(this, this, getMainLayout(), BinderActivity.class);
         Ease.easeIt(this, getMainLayout());
         onCreate();
     }

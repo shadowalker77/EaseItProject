@@ -1,9 +1,14 @@
 package com.alirezabdn.easeit.binder;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by shadoWalker on 1/28/18.
@@ -11,8 +16,8 @@ import java.lang.reflect.Field;
 
 public class Binder {
 
-    public static <T> void bind(Context context, T t, View root) {
-        Field[] fields = t.getClass().getDeclaredFields();
+    public static <T> void bind(Context context, T t, View root, @Nullable Class<?> exclusiveParent) {
+        List<Field> fields = getFieldsUpTo(t.getClass(), exclusiveParent);
         for (Field field : fields) {
             if (View.class.isAssignableFrom(field.getType())) {
                 field.setAccessible(true);
@@ -32,6 +37,20 @@ public class Binder {
                 }
             }
         }
+    }
+
+    private static ArrayList<Field> getFieldsUpTo(@NonNull Class<?> startClass,
+                                             @Nullable Class<?> exclusiveParent) {
+
+        ArrayList<Field> currentClassFields = new ArrayList<>(Arrays.asList(startClass.getDeclaredFields()));
+        Class<?> parentClass = startClass.getSuperclass();
+
+        if (parentClass != null && (exclusiveParent == null || !(parentClass.equals(exclusiveParent)))) {
+            List<Field> parentClassFields = getFieldsUpTo(parentClass, exclusiveParent);
+            currentClassFields.addAll(parentClassFields);
+        }
+
+        return currentClassFields;
     }
 
     public static int getIdByName(Context context, String name) throws NoSuchFieldException, IllegalAccessException {
