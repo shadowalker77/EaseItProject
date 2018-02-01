@@ -10,9 +10,9 @@ Every view that needs to bind to your <b>.java</b> files should have an <b>id</b
 Then if your activity or fragment extends <b>BinderActivity</b> or <b>BinderFragment</b>, you just need to declare: 
 
 ```
-private TextView myTextView 
+private TextView myTextView;
 ```
-and the view is binded automatically! So simple.
+That's it. The view is binded automatically! So simple.
 
 ### I want to bind a view that its variable name is different with its id?
 You can easily use <b>@AssignView</b> annotation like this:
