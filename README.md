@@ -18,7 +18,7 @@ and the view is binded automatically! So simple.
 You can easily use <b>@AssignView</b> annotation like this:
 
 ```
-@AssingView(R.id.{viewId})
+@AssignView(R.id.{viewId})
 private TextView anotherName;
 ```
 
@@ -30,8 +30,6 @@ You can use <b>BindStatus</b> annotation which has an enum for its status like t
 private View myView;
 ```
 This way <b>myView</b> will not be bind.
-
-This library also provides an easy way to use Fragment within Activities.
 
 # How to add this library to your project?
 In your project gradle file, add jitpack maven, so it should be like this:
@@ -52,3 +50,7 @@ dependencies {
 }
 ```
  After that, the only thing that you have to do is to extend <b>BinderActivity</b> or <b>BinderFragment</b> instead of default AppCompatActivity or Fragment.
+
+
+
+This library also provides an easy way to use Fragment within Activities.
