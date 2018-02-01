@@ -1,4 +1,4 @@
-<h1>What is this library? What can it do?</h1>
+# What is this library? What can it do?
 So, there is some libraries that aim to ease using views because we have to <b>findViewById</b> every view! This library simply make it the easiest way it could be.
 
 ### How does it make that happens?
@@ -32,3 +32,23 @@ private View myView;
 This way <b>myView</b> will not be bind.
 
 This library also provides an easy way to use Fragment within Activities.
+
+# How to add this library to your project?
+In your project gradle file, add jitpack maven, so it should be like this:
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Then in your app gradle file, add this dependancy, so it should be like this:
+
+```
+dependencies {
+    compile 'com.github.shadowalker77:EaseItProject:0.0.11'
+}
+```
+ After that, the only thing that you have to do is to extend <b>BinderActivity</b> or <b>BinderFragment</b> instead of default AppCompatActivity or Fragment.
